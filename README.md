@@ -33,7 +33,7 @@ When writing a commit message, avoid vague messages like "fixed." Be descriptive
 
 We would like you to have well over 200 commits by graduation, so commit early and often!
 
-// ============================================================ //
+// ================================================================================================================================ //
 
 Software Used:
 
