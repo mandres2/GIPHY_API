@@ -36,6 +36,10 @@ We would like you to have well over 200 commits by graduation, so commit early a
 // ============================================================ //
 
 Software Used:
+
+
 IDE: Microsoft Visual Studio Code
+
 Adobe XD
+
 API: https://developers.giphy.com/docs/
