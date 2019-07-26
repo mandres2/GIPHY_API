@@ -17,6 +17,6 @@ IDE: Microsoft Visual Studio Code
 
 Adobe XD
 
-Downloaded Song: Kevin Macleod - In the Hall of the Mountain King 
+Downloaded Song: Kevin Macleod - In the Hall of the Mountain King
 
 API: https://developers.giphy.com/docs/
