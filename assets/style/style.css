@@ -1,12 +1,13 @@
+/* This encompasses the body, with the main background image as well as the designated font */
 body {
     font: 18px;
+    font-family: 'Raleway', sans-serif;
     background-image: url("https://external-preview.redd.it/Tn_fXVLPbaYzjNmeneH0pi0DlO1zyBGyezJI8xEhCls.png?auto=webp&s=52145aefbdcfcb47945026b5e132866d2672a985");
     background-repeat: no-repeat;
     background-position: cover;
     background-size: 100%;
     color: black;
     font-size: 20px;
-    font-family: 'Raleway', sans-serif;
   }
 
   #meme {
@@ -48,13 +49,19 @@ body {
     border: 0;
     border-radius: 5px;
     box-shadow: 2px 2px 3px #bbb;
+    font-family: 'Raleway', sans-serif;
+
   }
 
   button:hover,
   input[type="submit"]:hover {
     background: #BD3B13;
+    font-family: 'Raleway', sans-serif;
+  }
   }
 
   button.active {
     background: #BD3B13;
+    font-family: 'Raleway', sans-serif;
+  }
   }

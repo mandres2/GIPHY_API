@@ -3,13 +3,8 @@
 // 2) The Web application will contact the GIPHY API library to pull the request GIFS and lay them out onto the web page.
 // 3) The user has the ability to click on a selected GIF and upon the on-click function, the GIF can animate upon the click and stop if the user clicks again.
 // 4) How will this work?
-  // a) First 
-
-
-
-
-
-
+  // a) First the user must create an array that can contain example topics the user can use to generate ideas of what particular GIF they want to inquire.
+  // b) After making the array, the user will create a function that will contain the logic to call upon the selected API database and to return back the elements (Which in this case are selected GIFs) to be rendered onto the web page.
 
 
 // ====================================================== Program ===============================================================================//
