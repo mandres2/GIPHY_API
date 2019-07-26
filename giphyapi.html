@@ -1,7 +1,7 @@
 <!-- General HTML5 Boiler plate format -->
 <!-- This is the HTML Document that contains the visual content of the web-page. -->
 <!DOCTYPE html>
-<!-- Note that the HTML content is in: English (en) -->
+<!-- Opening of the HTML; Note: that the HTML content is in: English (en) -->
 <html lang="en">
 
 <head>
@@ -18,26 +18,29 @@
 
   <!-- Audio Player -->
     <!-- This will be positioned at the top-left of the page. -->
-    <!-- audio + controls loop allows the selected .mp3 to loop once the user clicks the play button. -->
+    <!-- opening tag of audio with the addition of a custom controls loop. Controls loop allows the selected .mp3 to loop once the user clicks the play button. -->
     <audio controls loop>
       <!-- This is the relative link that contains the .mp3 file -->
         <source src="assets/sound effects/Kevin MacLeod ~ In the Hall of the Mountain King [original composer_ Edvard Grieg].mp3" type="audio/mp3">
+    <!-- closing tag of audio -->
     </audio>
 
     <!-- This div contains an array of pre-selected elements that be used to call upon data from the API source -->
-  <div id="meme-buttons">
+  <div id="meme-buttons"></div>
 
-  </div>
-
+  <!-- This is form (in which this case the ID is called: meme-form), where the user can type something in the box and click submit. Upon clicking submit, the application will generate the GIF of the topic the user has submitted via this form. -->
   <form id="meme-form">
+    <!-- This is a label that is placed above the box that gives the directions to the user. -->
     <label for="meme-input">Type something to make a GIF</label>
+    <!-- The input is text, and there is a break (<br>)  -->
     <input type="text" id="meme-input"><br>
+    <!-- This part is the submit button portion -->
     <input id="add-meme" type="submit" value="Submit">
   </form>
+  <!-- End of the form -->
 
-  <div id="meme">
-
-  </div>
+  <!-- This ID (which in this case is called meme), creates a div container to hold .js elements -->
+  <div id="meme"></div>
 
   <!-- This script source links the jQuery Content Delivery Network (CDN). -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -46,4 +49,5 @@
 
 <!-- Closing body of the HTML page -->
 </body>
+<!-- Closing of the HTML -->
 </html>

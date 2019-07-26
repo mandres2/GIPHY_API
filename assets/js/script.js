@@ -1,6 +1,9 @@
 // ======================================================Algorithm===============================================================================//
-// 1) The objective is to
-
+// 1) The main objective of this assignment is to create, a web application where the user, can type something to generate a compilation of GIFS pertaining to the topic the user submitted.
+// 2) The Web application will contact the GIPHY API library to pull the request GIFS and lay them out onto the web page.
+// 3) The user has the ability to click on a selected GIF and upon the on-click function, the GIF can animate upon the click and stop if the user clicks again.
+// 4) How will this work?
+  // a) First 
 
 
 
