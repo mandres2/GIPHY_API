@@ -1,0 +1,49 @@
+<!-- General HTML5 Boiler plate format -->
+<!-- This is the HTML Document that contains the visual content of the web-page. -->
+<!DOCTYPE html>
+<!-- Note that the HTML content is in: English (en) -->
+<html lang="en">
+
+<head>
+  <!-- That meta tag basically specifies which character set a website is written with. Here is a definition of UTF-8: UTF-8 (U from Universal Character Set + Transformation Format—8-bit) is a character encoding capable of encoding all possible characters (called code points) in Unicode. -->
+  <meta charset="UTF-8">
+  <!-- Title of Web Page -->
+  <title>GIPHY Meme API</title>
+  <!-- Local CSS - relative link -->
+  <link rel="stylesheet" type="text/css" href="assets/style/style.css">
+</head>
+
+<!-- opening body of the HTML page. -->
+<body>
+
+  <!-- Audio Player -->
+    <!-- This will be positioned at the top-left of the page. -->
+    <!-- audio + controls loop allows the selected .mp3 to loop once the user clicks the play button. -->
+    <audio controls loop>
+      <!-- This is the relative link that contains the .mp3 file -->
+        <source src="assets/sound effects/Kevin MacLeod ~ In the Hall of the Mountain King [original composer_ Edvard Grieg].mp3" type="audio/mp3">
+    </audio>
+
+    <!-- This div contains an array of pre-selected elements that be used to call upon data from the API source -->
+  <div id="meme-buttons">
+
+  </div>
+
+  <form id="meme-form">
+    <label for="meme-input">Type something to make a GIF</label>
+    <input type="text" id="meme-input"><br>
+    <input id="add-meme" type="submit" value="Submit">
+  </form>
+
+  <div id="meme">
+
+  </div>
+
+  <!-- This script source links the jQuery Content Delivery Network (CDN). -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <!-- Local JavaScript -->
+  <script src="assets/js/script.js"></script>
+
+<!-- Closing body of the HTML page -->
+</body>
+</html>

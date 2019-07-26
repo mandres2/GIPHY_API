@@ -1,0 +1,60 @@
+body {
+    font: 18px;
+    background-image: url("https://external-preview.redd.it/Tn_fXVLPbaYzjNmeneH0pi0DlO1zyBGyezJI8xEhCls.png?auto=webp&s=52145aefbdcfcb47945026b5e132866d2672a985");
+    background-repeat: no-repeat;
+    background-position: cover;
+    background-size: 100%;
+    color: black;
+    font-size: 20px;
+    font-family: 'Raleway', sans-serif;
+  }
+
+  #meme {
+    width: 70%;
+  }
+
+  .meme-item {
+    float: left;
+    padding: 10px;
+  }
+
+  form {
+    float: right;
+    width: 30%;
+    padding: 20px;
+  }
+
+  label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: 700;
+  }
+
+  input[type="text"] {
+    width: 100%;
+    height: 30px;
+    margin-bottom: 10px;
+    font-size: 18px;
+  }
+
+  button,
+  input[type="submit"] {
+    padding: 5px 20px;
+    margin: 0 10px 10px 0;
+    font-size: 18px;
+    color: #fff;
+    cursor: pointer;
+    background:#F2813C;
+    border: 0;
+    border-radius: 5px;
+    box-shadow: 2px 2px 3px #bbb;
+  }
+
+  button:hover,
+  input[type="submit"]:hover {
+    background: #BD3B13;
+  }
+
+  button.active {
+    background: #BD3B13;
+  }
