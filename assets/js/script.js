@@ -8,21 +8,32 @@
 
 
 // ====================================================== Program ===============================================================================//
+
+// Whenever one uses jQuery to manipulate a web page, they must wait until the document ready event has fired. The document ready event signals that the Date Object Model, (DOM), of the page is now ready, so that the user can manipulate it without worrying that parts of the DOM has not yet been created. The document ready event fires before all images etc. are loaded, but after the whole DOM itself is ready.
 $(document).ready(function() {
 
+    // A variable called meme is set to contain array of elements, where the user has the option to choose from, and when clicking these elements, it will load a GIF upon user-click request.
     var meme = [
       "kermit", "harambe", "filthyfrank", "minecraft", "grumpycat", "rick roll",
       "pikachu", "area 51", "comrade elmo", "keanu reeves", "thomas the tank engine", "cory in the house", "the bee movie", "vsauce", "nyan cat", "pewdiepie", "spongebob", "patrick", "snoopdog", "shrek", "bongo cat",
     ];
 
+    // This function is called: populateButtons, where it will use the methods - arraToUse, classToAdd, and areaToAddTo to be used in the follow for-loop.
     function populateButtons(arrayToUse, classToAdd, areaToAddTo) {
+      // Using jQuery syntax, areaToAddTo will go under a method called: .empty(). According to the jQuery documentation, .empty() Removes child nodes and descendants from any elements in matched set. (This method does not accept any arguments) This method removes not only child (and other descendant) elements, but also any text within the set of matched elements. This is because, according to the DOM specification, any string of text within an element is considered a child node of that element.
+      // **
       $(areaToAddTo).empty();
 
+      // This for-loop will assign the array, (arrayToUse) with the following properties, and will add a button to the areaToAddTo whenever the user types in topic and submits it.
       for (var i = 0; i < arrayToUse.length; i++) {
+        // In jQuery syntax, var a is assigned to be a button element. (When using <> you are creating an HTML element). It's important to note that this method does not replace a class. It simply adds the class, appending it to any which may already be assigned to the elements.
         var a = $("<button>");
+        // .addClass() is a jQuery method that adds the specified class(es) to each element in the set of matched elements.
         a.addClass(classToAdd);
+        // Using .attr()
         a.attr("data-type", arrayToUse[i]);
         a.text(arrayToUse[i]);
+        // areaToAddTo is using the .append() method to attach the stated variables from var a and it's properties to itself.
         $(areaToAddTo).append(a);
       }
 
