@@ -77,17 +77,21 @@ $(document).ready(function() {
 
             // A variable called memeDiv is declared and a div class element named: meme-item is created via jQuery syntax.
             var memeDiv = $("<div class=\"meme-item\">");
-            // a variable called rating is declared and it is set to equal to the result indices that is chained to rating via the period using the AJAX methodology.
+            // a variable called rating is declared and it is set to equal to the result indices that is chained to rating via the period using the AJAX methodology. This will pull up the results from the GIPHY API library and give it a rating (i.e. g, pg-13 etc.) by the rendered GIF.
             var rating = results[i].rating;
-            
+            // A new variable called: p is declared and using jQuery Syntax, a general paragraph element is formed that contains the following the text -> "Rating" and it is linked to the actual result rating using the + sign and inserting the variable: rating.
             var p = $("<p>").text("Rating: " + rating);
 
+            // These lines of code declare two variables. One is animated, and one is still. it will be linked to the search result indices with a fixed height due to the properties: .fixed_height.url
             var animated = results[i].images.fixed_height.url;
             var still = results[i].images.fixed_height_still.url;
-
+            // a variable called -> memeImage is set to equal to an established image div using jQuery syntax. Whenever a <> is within the jQuery syntax, an HTML element is formed.
             var memeImage = $("<img>");
+            // the variable memeImage, has an attribute image to src, and it is related to the variable still. So when the user types in their meme/topic the image of the GIF will appear still frame.
             memeImage.attr("src", still);
+            // the variable memeImage, has an attribute image to data-still, and it is related to the variable still. So when the user types in their meme/topic the image of the GIF will appear still frame.
             memeImage.attr("data-still", still);
+            // memeImage has an attribute
             memeImage.attr("data-animate", animated);
             memeImage.attr("data-state", "still");
             memeImage.addClass("meme-image");
