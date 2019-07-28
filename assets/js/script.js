@@ -1,5 +1,5 @@
 // ======================================================Algorithm===============================================================================//
-// 1) The main objective of this assignment is to create, a web application where the user, can type something to generate a compilation of GIFS pertaining to the topic the user submitted.
+// 1) The main goal of this assignment is to create a web application where the user, can type something to generate a compilation of GIFS pertaining to the topic the user submitted.
 // 2) The Web application will contact the GIPHY API library to pull the request GIFS and lay them out onto the web page.
 // 3) The user has the ability to click on a selected GIF and upon the on-click function, the GIF can animate upon the click and stop if the user clicks again.
 // 4) How will this work?
@@ -12,16 +12,16 @@
 // Whenever one uses jQuery to manipulate a web page, they must wait until the document ready event has fired. The document ready event signals that the Date Object Model, (DOM), of the page is now ready, so that the user can manipulate it without worrying that parts of the DOM has not yet been created. The document ready event fires before all images etc. are loaded, but after the whole DOM itself is ready.
 $(document).ready(function() {
 
-    // A variable called meme is set to contain array of elements, where the user has the option to choose from, and when clicking these elements, it will load a GIF upon user-click request.
+    // A variable called meme is set to contain an array of elements, where the user has the option to choose from, and when clicking these elements, it will load a GIF upon user-click request.
     var meme = [
       "kermit", "harambe", "filthyfrank", "minecraft", "grumpycat", "rick roll",
       "pikachu", "area 51", "comrade elmo", "keanu reeves", "thomas the tank engine", "cory in the house", "the bee movie", "vsauce", "nyan cat", "pewdiepie", "spongebob", "patrick", "snoopdog", "shrek", "bongo cat",
     ];
 
-    // This function is called: populateButtons, where it will use the methods - arraToUse, classToAdd, and areaToAddTo to be used in the follow for-loop.
+    // This function is called: populateButtons, where it will contain these elements - arrayToUse, classToAdd, and areaToAddTo to be used in the following for-loop.
     function populateButtons(arrayToUse, classToAdd, areaToAddTo) {
       // Using jQuery syntax, areaToAddTo will go under a method called: .empty(). According to the jQuery documentation, .empty() Removes child nodes and descendants from any elements in matched set. (This method does not accept any arguments) This method removes not only child (and other descendant) elements, but also any text within the set of matched elements. This is because, according to the DOM specification, any string of text within an element is considered a child node of that element.
-      // **
+
       $(areaToAddTo).empty();
 
       // This for-loop will assign the array, (arrayToUse) with the following properties, and will add a button to the areaToAddTo whenever the user types in topic and submits it.
@@ -30,13 +30,15 @@ $(document).ready(function() {
         var a = $("<button>");
         // .addClass() is a jQuery method that adds the specified class(es) to each element in the set of matched elements.
         a.addClass(classToAdd);
-        // Using .attr()
+        // The .attr() method gets the attribute value for only the first element in the matched set, which in this particular case, var a = $("<button>") is getting the attribute value (data-type) from the index of arrayToUse.
         a.attr("data-type", arrayToUse[i]);
+        //variable a is using the .text() method to set text contents of the selected elements in which this line of code is using the index of arrayToUse.
         a.text(arrayToUse[i]);
         // areaToAddTo is using the .append() method to attach the stated variables from var a and it's properties to itself.
         $(areaToAddTo).append(a);
+      //This curly-bracket closes out the for-loop function
       }
-
+      //This curly-bracket closes out the function populateButtons(arrayToUse, classToAdd, areaToAddTo)
     }
 
     $(document).on("click", ".meme-button", function() {
