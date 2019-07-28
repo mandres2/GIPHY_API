@@ -17,11 +17,11 @@ $(document).ready(function() {
       "kermit", "harambe", "filthyfrank", "minecraft", "grumpycat", "rick roll",
       "pikachu", "area 51", "comrade elmo", "keanu reeves", "thomas the tank engine", "cory in the house", "the bee movie", "vsauce", "nyan cat", "pewdiepie", "spongebob", "patrick", "snoopdog", "shrek", "bongo cat",
     ];
+    //Closing bracket for the array that links to variable: meme.
 
     // This function is called: populateButtons, where it will contain these elements - arrayToUse, classToAdd, and areaToAddTo to be used in the following for-loop.
     function populateButtons(arrayToUse, classToAdd, areaToAddTo) {
-      // Using jQuery syntax, areaToAddTo will go under a method called: .empty(). According to the jQuery documentation, .empty() Removes child nodes and descendants from any elements in matched set. (This method does not accept any arguments) This method removes not only child (and other descendant) elements, but also any text within the set of matched elements. This is because, according to the DOM specification, any string of text within an element is considered a child node of that element.
-
+      // areaToAddTo will go under a method called: .empty(). According to the jQuery documentation, .empty() Removes child nodes and descendants from any elements in matched set. (This method does not accept any arguments) This method removes not only child (and other descendant) elements, but also any text within the set of matched elements. This is because, according to the DOM specification, any string of text within an element is considered a child node of that element.
       $(areaToAddTo).empty();
 
       // This for-loop will assign the array, (arrayToUse) with the following properties, and will add a button to the areaToAddTo whenever the user types in topic and submits it.
@@ -32,18 +32,23 @@ $(document).ready(function() {
         a.addClass(classToAdd);
         // The .attr() method gets the attribute value for only the first element in the matched set, which in this particular case, var a = $("<button>") is getting the attribute value (data-type) from the index of arrayToUse.
         a.attr("data-type", arrayToUse[i]);
-        //variable a is using the .text() method to set text contents of the selected elements in which this line of code is using the index of arrayToUse.
+        // variable a is using the .text() method to set text contents of the selected elements in which this line of code is using the index of arrayToUse.
         a.text(arrayToUse[i]);
-        // areaToAddTo is using the .append() method to attach the stated variables from var a and it's properties to itself.
+        // areaToAddTo is using the .append() method to attach the stated variables from variable a and it's properties to itself.
         $(areaToAddTo).append(a);
-      //This curly-bracket closes out the for-loop function
+      //This curly-bracket closes out the for-loop function (var i = 0; i < arrayToUse.length)
       }
-      //This curly-bracket closes out the function populateButtons(arrayToUse, classToAdd, areaToAddTo)
-    }
 
+    }
+    //This curly-bracket closes out the function populateButtons(arrayToUse, classToAdd, areaToAddTo)
+
+    // This binds a click event to the document and all child elements within it. This method is referred to as delegated event handling. On line 46, $(document).on is creating an "on-click" function for the button which is declared to (class): (.)meme-button
     $(document).on("click", ".meme-button", function() {
+      // The .empty() method on line 48 basically empties the div class -> meme allowing the new elements from line 52 to be loaded if the user clicks a different meme button. So for example, if the user clicks kermit first upon opening the web application, and then proceeds to click harambe. All the gifs of kermit that was loaded first will be "emptied" and the gifs of harambe will be loaded since it is the currently activated meme button.
       $("#meme").empty();
+      // The class meme-button is using a jQuery method called: .removeClass() Remove a single class, multiple classes, or all classes from each element in the set of matched elements. Line 49 basically is telling the class to meme-button to remove what is "active" to create room for the new class to be added and set when the user clicks the meme button.
       $(".meme-button").removeClass("active");
+      //After the .removeClass() process. Using the concept of this and chaining it together with the .addClass() method will basically create a new class to the active object. Note: the keyword: this, is commonly used inside functions and objects. Where the function is declared alters what this means. It always refers to one object, and usually the object in which the function operates.
       $(this).addClass("active");
 
       var type = $(this).attr("data-type");
