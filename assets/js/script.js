@@ -44,9 +44,9 @@ $(document).ready(function() {
 
     // This binds a click event to the document and all child elements within it. This method is referred to as delegated event handling. On line 46, $(document).on is creating an "on-click" function for the button which is declared to (class): (.)meme-button
     $(document).on("click", ".meme-button", function() {
-      // The .empty() method on line 48 basically empties the div class -> meme allowing the new elements from line 52 to be loaded if the user clicks a different meme button. So for example, if the user clicks kermit first upon opening the web application, and then proceeds to click harambe. All the gifs of kermit that was loaded first will be "emptied" and the GIFS of Harambe will be loaded since it is the currently activated meme button.
+      // The .empty() method on line 48 basically empties the div class -> meme allowing the new elements from line 52 to be loaded if the user clicks a different meme button. So for example, if the user clicks kermit first upon opening the web application, and then proceeds to click Harambe. All the GIFs of kermit that was loaded first will be "emptied" and the GIFS of Harambe will be loaded since it is the currently activated meme button.
       $("#meme").empty();
-      // The class meme-button is using a jQuery method called: .removeClass() Remove a single class, multiple classes, or all classes from each element in the set of matched elements. Line 49 basically is telling the class to meme-button to remove what is "active" to create room for the new class to be added and set when the user clicks the meme button.
+      // The class meme-button is using a jQuery method called: .removeClass() which basically removes a single class, multiple classes, or all classes from each element in the set of matched elements. Line 49 basically is telling the class to meme-button to remove what is "active" to create room for the new class to be added and set when the user clicks the meme button.
       $(".meme-button").removeClass("active");
       //After the .removeClass() process. Using the concept of this and chaining it together with the .addClass() method will basically create a new class to the active object. Note: the keyword: this, is commonly used inside functions and objects. Where the function is declared alters what this means. It always refers to one object, and usually the object in which the function operates.
       $(this).addClass("active");
@@ -62,7 +62,7 @@ $(document).ready(function() {
         url: queryURL,
         // One needs to REQUEST/call AJAX what type of method to hit the targeted API.
         method: "GET"
-        // This method, will return a 'promise' using .then
+        // This method, will return a 'promise' using .then() function
 
       //Closing curly-bracket + parentheses for the jQuery AJAX method
       })
@@ -91,25 +91,34 @@ $(document).ready(function() {
             memeImage.attr("src", still);
             // the variable memeImage, has an attribute image to data-still, and it is related to the variable still. So when the user types in their meme/topic the image of the GIF will appear still frame.
             memeImage.attr("data-still", still);
-            // memeImage has an attribute
+            // memeImage has an attribute method designated to the variable animated, thus allowing the GIF to become animated.. (The data-* global attributes form a class of attributes called custom data attributes, that allow proprietary information to be exchanged between the HTML and its DOM representation by scripts).
             memeImage.attr("data-animate", animated);
+            // For this line of code memeImage is using the same exact method from the previous line but instead it will be applied to the variable still, and the data-type is data-state so that the moving GIF that was clicked once, will remain still if the user clicks it again.
             memeImage.attr("data-state", "still");
+            // The variable memeImage is using an .addClass() method so that the element, meme-image will exhibit the still and animate properties upon user-on-click functions for .meme-image
             memeImage.addClass("meme-image");
-
+            // memeDiv which is an HTML element, will be obtain the rating of each GIF via the .append() method.
             memeDiv.append(p);
+            // Using the same .append() method, memeDiv will receive the properties of memeImage. This is container that will hold all of the motion properties of the GIF.
             memeDiv.append(memeImage);
-
+            // Lastly, the HTML id = meme will be the place where memeDiv and it's containing properties be rendered to.
             $("#meme").append(memeDiv);
           }
+          // This is the closing curly-bracket for the for-loop GIF results
         });
+        // This curly-bracket + parentheses and semi-colon closes out the call-back function.
     });
+    // This curly-bracket + parentheses and semi-colon closes out the $(document).on("click", ".meme-button", function()
 
+    // This is document.on function will focus on the class .meme-image where it will give the boolean values that allow the GIF itself to animate or to remain still upon user click.
     $(document).on("click", ".meme-image", function() {
-
+      // The variable state will be given a this attribute to "data-state." Note that the syntax is in jQuery format.
       var state = $(this).attr("data-state");
-
+      // An if statement is introduced and stating that: if the variable state is equal to still...
       if (state === "still") {
+        // gives the src the data-animate attribute.
         $(this).attr("src", $(this).attr("data-animate"));
+        // ... then allow 'this' current data-state to be animated upon click.
         $(this).attr("data-state", "animate");
       }
       else {
