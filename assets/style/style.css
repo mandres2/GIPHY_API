@@ -1,67 +1,118 @@
-/* This encompasses the body, with the main background image as well as the designated font */
+/*Opening of body CSS */
 body {
+    /* This sets the font size to 18 px */
     font: 18px;
+    /* This is the particular font family that was downloaded from the Google Fonts API */
     font-family: 'Raleway', sans-serif;
+    /* This is the main background the user will see upon page load. It is connected via the images URL link */
     background-image: url("https://external-preview.redd.it/Tn_fXVLPbaYzjNmeneH0pi0DlO1zyBGyezJI8xEhCls.png?auto=webp&s=52145aefbdcfcb47945026b5e132866d2672a985");
+    /*  This means that there is no repeat of the background image. It will be one image. */
     background-repeat: no-repeat;
+    /* This means that the background will expand to cover the webpage. */
     background-position: cover;
+    /* This is the size of the background image, 100% is the set percentage. */
     background-size: 100%;
-    color: black;
+    /* This will be the color of the font that are embedded in the body-portion */
+    color: white;
+    /* Font-size */
     font-size: 20px;
   }
+  /* Closing of the body style CSS */
 
+  /* This is the opening for the css style properties for meme ID */
   #meme {
+    /* The width is set for 70% */
     width: 70%;
   }
+  /* closing of the meme ID */
 
+  /*This is the opening for the CSS properties for meme-item Class*/
   .meme-item {
+    /* This is telling that the class will float to the farthest left hand portion of the web page. */
     float: left;
+    /* This will give the class some padding. of 10 pixels  */
     padding: 10px;
   }
+  /* This is the closing curly bracket for the meme-item class. */
 
+  /* This is the opening for the CSS properties for form. */
   form {
     float: right;
+    /* This is telling the form to float to the farthest right */
     width: 30%;
+    /* This property is telling form to have a width of 30% */
     padding: 20px;
+    /* There will be padding to accompany the form with 20 px. That way the Submit button won't be conjoined with the submit form.; */
   }
+  /* Closing for form CSS properties */
 
+  /* Opening of label CSS properties */
   label {
+    /* The display type of the label block. where the text will be spaced out */
     display: block;
+    /* margin-bottom is set to 10px which provides a small amt of space towards the bottom. */
     margin-bottom: 10px;
+    /* font-weight is set to 700 which means the font's visibility will show to be slightly more bolder due to the added weight. */
     font-weight: 700;
   }
+  /* closing of the label tag. */
 
+  /* This is the opening of the CSS style properties for input[type="text"] */
   input[type="text"] {
+    /* Width is set to 100% */
     width: 100%;
+    /* Height is set only to 30 pixels */
     height: 30px;
+    /* Margin-bottom is set to 10 px which provides a small space towards the bottom */
     margin-bottom: 10px;
+    /* font-size is 18px. */
     font-size: 18px;
   }
+  /* Closing for input[type="text"] tag */
 
+  /* Opening of the button, input[type="submit"] tag */
   button,
   input[type="submit"] {
+    /* padding is set to 5 px top, 20 px right */
     padding: 5px 20px;
+    /* margin is set to 0 top, 10 px right bottom 10px, 0 left  */
     margin: 0 10px 10px 0;
+    /* font-size is 18 px */
     font-size: 18px;
+    /* the color of this is set to #fff */
     color: #fff;
+    /* cursor sets to pointer */
     cursor: pointer;
+    /* This is the background color. */
     background:#F2813C;
+    /* border is set to zero */
     border: 0;
+    /* border-radius is 5px */
     border-radius: 5px;
+    /* box-shadow is 2px top, 2px right 3px bottom with a color #bbb */
     box-shadow: 2px 2px 3px #bbb;
+    /* This is the font family used for the submit button */
     font-family: 'Raleway', sans-serif;
-
   }
+  /* Closing of the button, input[type="submit"] tag */
 
+  /* This is the opening tag for the CSS properties of button hover input[type ="submit"]:hover */
   button:hover,
   input[type="submit"]:hover {
+    /* When the cursor gover over the submit button it will change to this background color: #BD3B13 */
     background: #BD3B13;
+    /* This is the font button when the cursor hovers over the submit button */
     font-family: 'Raleway', sans-serif;
   }
+  /* This is the closing tag for the CSS properties of button hover input[type ="submit"]:hover */
+  button:hover,
 
-
+  /* This is the opening tag for the CSS properties of button:hover, button.active */
+  button:hover,
   button.active {
+    /* background color of this will change when the user moves the cursor over the selected active buttons on the web app. */
     background: #BD3B13;
+    /* this is the font of the active buttons */
     font-family: 'Raleway', sans-serif;
   }
 
