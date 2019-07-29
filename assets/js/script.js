@@ -134,20 +134,25 @@ $(document).ready(function() {
     });
     // closing of the $(document).on("click", ".meme-image", function().
 
-    
+    // This line creates an on-click listener evenet for the id: add-meme.
     $("#add-meme").on("click", function(event) {
       // event.preventDefault() can be used to prevent an event's default behavior.
       // Here, it prevents the submit button from trying to submit a form when clicked
       event.preventDefault();
+      // a variable newMeme is declared and using jQuery syntax, input is chained to the API .eq, and .value.
       var newMeme = $("input").eq(0).val();
-
+      // An if statement is stated that if the newMeme length is greater than 2...
       if (newMeme.length > 2) {
+        // the meme will be pushed into the element: newMeme
         meme.push(newMeme);
       }
-
-      populateButtons(meme, "meme-button", "#meme-buttons");
+      // This line of code, allows the user to type something into the search box and submit, and the button of that search topic will be added to the list on the web app. Also this will allow the user to click upon the newly generated button to view the GIFs pulled from the API library.
+     populateButtons(meme, "meme-button", "#meme-buttons");
 
     });
+    // closing for the $("#add-meme").on("click", function(event).
 
+    // this last line of code: renders the "meme-buttons" onto the web application.
     populateButtons(meme, "meme-button", "#meme-buttons");
   });
+  // This is the closing for: $(document).ready(function() { that started at the very top.
