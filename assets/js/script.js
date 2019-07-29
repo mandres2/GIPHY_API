@@ -121,12 +121,20 @@ $(document).ready(function() {
         // ... then allow 'this' current data-state to be animated upon click.
         $(this).attr("data-state", "animate");
       }
+      //bracket that closes if statement
+
+      //opening of the else statement:
       else {
+        // attribute this src to the data-type: still
         $(this).attr("src", $(this).attr("data-still"));
+        // upon clicking the animated GIF, 'this' data-state will go to still.
         $(this).attr("data-state", "still");
       }
+      // closing of the else bracket.
     });
+    // closing of the $(document).on("click", ".meme-image", function().
 
+    
     $("#add-meme").on("click", function(event) {
       // event.preventDefault() can be used to prevent an event's default behavior.
       // Here, it prevents the submit button from trying to submit a form when clicked
