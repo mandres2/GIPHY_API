@@ -54,7 +54,7 @@ $(document).ready(function() {
       // On line 55, a variable called: type is declared. Using jQuery syntax, "this" has an attribute method() chained to the element called data-type. Remember, the attribute method [.attr()], attributes value for only the first element in the matched set, which in this particular case, variable type is getting the attribute value (data-type).
       var type = $(this).attr("data-type");
       // A variable called: queryURL is declared where it links the API library, which GIPHY was used and using the API syntax, first the link is introduced with and opening and closing quotation mark, followed by a plus (+) sign then using the word: type followed by another (+) sign then the API key that the user has obtained access to with opening and closing quotations. This is a vital portion to the entire application because it is linking the web application to the API Database.
-      var queryURL = "http://api.giphy.com/v1/gifs/search?q=" + type + "&api_key=BkaUZZWcFij6J7AoQj3WtPb1R2p9O6V9&limit=10";
+      var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + type + "&api_key=BkaUZZWcFij6J7AoQj3WtPb1R2p9O6V9&limit=10";
 
       //This is introducing to the AJAX method utilizing jQuery Syntax.
       $.ajax({
